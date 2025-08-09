@@ -6,7 +6,7 @@
   services = {
     xserver = {
       enable = true;
-      xkb.layout = "us,nl";
+      xkb.layout = "us,cz";
       excludePackages = [pkgs.xterm];
     };
 

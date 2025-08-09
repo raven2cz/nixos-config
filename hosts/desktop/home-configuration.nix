@@ -2,48 +2,38 @@
   monitors.hyprland = {
     enable = true;
     config = ''
-      monitor = DP-2, 2560x1440@165, -2560x0, 1
-      monitor = DP-3, 2560x1440@165, 0x0, 1
+      monitor = DP-2, 3840x2160@60, 0x0, 1
     '';
     workspaces = [
-      "1,   monitor:DP-3"
-      "2,   monitor:DP-3"
-      "3,   monitor:DP-3"
-      "4,   monitor:DP-3"
-      "5,   monitor:DP-3"
-      "9,   monitor:DP-2"
-      "10,  monitor:DP-2"
+      "1,  monitor:DP-2"
+      "2,  monitor:DP-2"
+      "3,  monitor:DP-2"
+      "4,  monitor:DP-2"
     ];
   };
 
   # Audio configuration for desktop-work
   audio.pipewire = {
     enable = true;
+
     cards = {
-      # GA102 High Definition Audio Controller - Off
-      "alsa_card.pci-0000_09_00.1" = {
-        profile = "off";
-      };
-      # SMSL AD-18 Amplifier - Pro Audio
-      "alsa_card.usb-SMSL_AUDIO_SMSL_AD-18_Amplifier-00" = {
-        profile = "pro-audio";
-      };
-      # HD Pro Webcam C920 - Off
-      "alsa_card.usb-046d_HD_Pro_Webcam_C920_09E4D43F-02" = {
-        profile = "off";
-      };
-      # RODE NT-USB - Analog Stereo Input
-      "alsa_card.usb-RODE_Microphones_RODE_NT-USB-00" = {
-        profile = "input:analog-stereo";
-      };
-      # Starship/Matisse HD Audio Controller - Off
-      "alsa_card.pci-0000_0b_00.4" = {
-        profile = "off";
-      };
+      # NVIDIA AD104 HDMI/DP audio
+      "alsa_card.pci-0000_01_00.1" = { profile = "off"; };
+
+      # Radeon HDA (Rembrandt/Strix)
+      "alsa_card.pci-0000_0d_00.1" = { profile = "off"; };
+
+      # Trust Webcam (mikrofon)
+      "alsa_card.usb-Trust_Webcam_Trust_Webcam_20200907-02" = { profile = "off"; };
+
+      # USB zvukovka (Generic USB Audio)
+      "alsa_card.usb-Generic_USB_Audio-00" = { profile = "HiFi"; };
+      # Pokud chceš nízkou latenci a víc kanálů: { profile = "pro-audio"; } (ale změní se názvy sink/source)
     };
-    # Set default devices based on your setup
-    defaultSink = "alsa_output.usb-SMSL_AUDIO_SMSL_AD-18_Amplifier-00.pro-output-0";
-    defaultSource = "alsa_input.usb-RODE_Microphones_RODE_NT-USB-00.analog-stereo";
+
+    # Výchozí zařízení – přesně podle tvých názvů z pactl
+    defaultSink   = "alsa_output.usb-Generic_USB_Audio-00.HiFi__Speaker__sink";
+    defaultSource = "alsa_input.usb-Generic_USB_Audio-00.HiFi__Mic1__source";
   };
 
   modules = {

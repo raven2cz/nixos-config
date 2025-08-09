@@ -1,23 +1,23 @@
 <h1 align="center">
    <img src="./.github/assets/logo/nixos-logo.png" width="100px" /> 
    <br>
-      Rodey's Flakes 
+      Raven2cz's Flakes 
    <br>
       <img src="./.github/assets/palette/palette-0.png" width="600px" /> <br>
 
    <div align="center">
       <p></p>
       <div align="center">
-         <a href="https://github.com/rodeyseijkens/nixos-config/stargazers">
-            <img src="https://img.shields.io/github/stars/rodeyseijkens/nixos-config?color=FABD2F&labelColor=282828&style=for-the-badge&logo=starship&logoColor=FABD2F">
+         <a href="https://github.com/raven2cz/nixos-config/stargazers">
+            <img src="https://img.shields.io/github/stars/raven2cz/nixos-config?color=FABD2F&labelColor=282828&style=for-the-badge&logo=starship&logoColor=FABD2F">
          </a>
-         <a href="https://github.com/rodeyseijkens/nixos-config/">
-            <img src="https://img.shields.io/github/repo-size/rodeyseijkens/nixos-config?color=B16286&labelColor=282828&style=for-the-badge&logo=github&logoColor=B16286">
+         <a href="https://github.com/raven2cz/nixos-config/">
+            <img src="https://img.shields.io/github/repo-size/raven2cz/nixos-config?color=B16286&labelColor=282828&style=for-the-badge&logo=github&logoColor=B16286">
          </a>
          <a href="https://nixos.org">
             <img src="https://img.shields.io/badge/NixOS-unstable-blue.svg?style=for-the-badge&labelColor=282828&logo=NixOS&logoColor=458588&color=458588">
          </a>
-         <a href="https://github.com/rodeyseijkens/nixos-config/blob/main/LICENSE">
+         <a href="https://github.com/raven2cz/nixos-config/blob/main/LICENSE">
             <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&colorA=282828&colorB=98971A&logo=unlicense&logoColor=98971A&"/>
          </a>
       </div>
@@ -577,7 +577,7 @@ First install nixos using any [graphical ISO image](https://nixos.org/download.h
 
 ```bash
 nix-shell -p git
-git clone https://github.com/rodeyseijkens/nixos-config
+git clone https://github.com/raven2cz/nixos-config
 cd nixos-config
 ```
 
@@ -610,7 +610,7 @@ Even though I use home manager and Stylix for automated theming, there is still 
 ```nix
 programs.git = {
    ...
-   userName = "rodeyseijkens";
+   userName = "raven2cz";
    userEmail = "me@rodey.nl";
    ...
 };
@@ -702,7 +702,7 @@ Other dotfiles that I learned / copy from:
 
 <!-- # ✨ Stars History -->
 
-<!-- <p align="center"><img src="https://api.star-history.com/svg?repos=rodeyseijkens/nixos-config&type=Timeline&theme=dark" /></p> -->
+<!-- <p align="center"><img src="https://api.star-history.com/svg?repos=raven2cz/nixos-config&type=Timeline&theme=dark" /></p> -->
 
 <!-- end of page, send back to the top -->
 
