@@ -1,5 +1,5 @@
 {
-  description = "Rodey's nixos configuration";
+  description = "Raven2cz's nixos configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -80,7 +80,7 @@
     stylix,
     ...
   } @ inputs: let
-    username = "rodey";
+    username = "box";
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
