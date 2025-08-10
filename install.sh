@@ -131,3 +131,6 @@ main() {
 }
 
 main && exit 0
+
+    echo -en "Use$YELLOW "$username"$NORMAL as ${GREEN}username${NORMAL} ? "
+    confirm

@@ -36,8 +36,8 @@ in {
         "$mainMod SHIFT,  Print,  exec, screenshot --swappy"
 
         # switch focus
-        "$mainMod,  left,   movefocus,  l"
-        "$mainMod,  right,  movefocus,  r"
+        "$mainMod ALT,  left,   movefocus,  l"
+        "$mainMod ALT,  right,  movefocus,  r"
         "$mainMod,  up,     movefocus,  u"
         "$mainMod,  down,   movefocus,  d"
         "$mainMod,  h,      movefocus,  l"
@@ -46,6 +46,8 @@ in {
         "$mainMod,  l,      movefocus,  r"
 
         # switch workspace
+        "$mainMod,  left,   workspace,  e-1"
+        "$mainMod,  right,  workspace,  e+1"
         "$mainMod,  1,  workspace,  1"
         "$mainMod,  2,  workspace,  2"
         "$mainMod,  3,  workspace,  3"
@@ -133,8 +135,8 @@ in {
 
       # mouse binding
       bindm = [
-        "$mainMod,        mouse:274,  movewindow"
-        "$mainMod SHIFT,  mouse:274,  resizewindow"
+        "$mainMod, mouse:272, movewindow"
+        "$mainMod, mouse:273, resizewindow"
       ];
     };
   };

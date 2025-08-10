@@ -44,6 +44,8 @@
     bleachbit # cache cleaner
     pwvucontrol # pipewire volume controle (GUI)
     mission-center # system monitor
+    mc # Midnight Commander
+    ranger # Ranger
 
     # Node.js
     volta

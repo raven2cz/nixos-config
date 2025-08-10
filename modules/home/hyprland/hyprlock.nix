@@ -16,7 +16,7 @@ in {
 
     settings = {
       general = {
-        hide_cursor = true;
+        hide_cursor = false;
         no_fade_in = false;
         disable_loading_bar = false;
         ignore_empty_input = true;

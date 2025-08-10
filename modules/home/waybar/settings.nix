@@ -9,7 +9,7 @@
   };
 in {
   programs.waybar.settings.mainBar = with custom; {
-    position = "bottom";
+    position = "top";
     layer = "top";
     height = 28;
     margin-top = 0;
@@ -48,11 +48,11 @@ in {
       format = "{icon}";
       on-click = "activate";
       format-icons = {
-        "1" = "I";
-        "2" = "II";
-        "3" = "III";
-        "4" = "IV";
-        "5" = "V";
+        "1" = "main";
+        "2" = "3w";
+        "3" = "app";
+        "4" = "code";
+        "5" = "dir";
         "6" = "VI";
         "7" = "VII";
         "8" = "VIII";
