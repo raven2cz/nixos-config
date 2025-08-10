@@ -20,6 +20,7 @@ in {
         "$mainMod,        Space,  exec,       rofi-launcher"
         "$mainMod SHIFT,  D,      exec,       legcord --enable-features=UseOzonePlatform --ozone-platform=wayland"
         "$mainMod SHIFT,  Escape, exec,       rofi-power-menu"
+
         "$mainMod,        P,      pseudo,"
         "$mainMod,        X,      togglesplit,"
         "$mainMod,        T,      exec,       toggle-opacity"
@@ -38,8 +39,8 @@ in {
         # switch focus
         "$mainMod ALT,  left,   movefocus,  l"
         "$mainMod ALT,  right,  movefocus,  r"
-        "$mainMod,  up,     movefocus,  u"
-        "$mainMod,  down,   movefocus,  d"
+        "$mainMod ALT,  up,     movefocus,  u"
+        "$mainMod ALT,  down,   movefocus,  d"
         "$mainMod,  h,      movefocus,  l"
         "$mainMod,  j,      movefocus,  d"
         "$mainMod,  k,      movefocus,  u"
@@ -91,10 +92,6 @@ in {
         "$mainMod CTRL, k,      resizeactive, 0 -80"
         "$mainMod CTRL, l,      resizeactive, 80 0"
 
-        "$mainMod ALT,  left,   moveactive, -80 0"
-        "$mainMod ALT,  right,  moveactive, 80 0"
-        "$mainMod ALT,  up,     moveactive, 0 -80"
-        "$mainMod ALT,  down,   moveactive, 0 80"
         "$mainMod ALT,  h,      moveactive, -80 0"
         "$mainMod ALT,  j,      moveactive, 0 80"
         "$mainMod ALT,  k,      moveactive, 0 -80"
