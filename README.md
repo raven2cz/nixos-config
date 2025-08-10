@@ -611,7 +611,7 @@ Even though I use home manager and Stylix for automated theming, there is still 
 programs.git = {
    ...
    userName = "raven2cz";
-   userEmail = "me@rodey.nl";
+   userEmail = "tonda.fischer@gmail.com";
    ...
 };
 ```

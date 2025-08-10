@@ -14,7 +14,7 @@ in {
 
     base16Scheme = {
       system = "base16";
-      name = "Rodey Gruvb0x";
+      name = "Raven2cz Gruvb0x";
       author = "Rodey";
       variant = "dark";
       palette = {
