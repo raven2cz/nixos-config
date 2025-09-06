@@ -45,12 +45,12 @@ in {
 
     fonts = {
       serif = {
-        package = pkgs.maple-mono.NF-CN;
-        name = "Maple Mono NF CN";
+        package = pkgs.eb-garamond;
+        name = "EB Garamond";
       };
       sansSerif = {
-        package = pkgs.maple-mono.NF-CN;
-        name = "Maple Mono NF CN";
+        package = pkgs.inter;
+        name = "Inter";
       };
       monospace = {
         package = pkgs.maple-mono.NF-CN;
@@ -58,7 +58,7 @@ in {
       };
       emoji = {
         package = pkgs.noto-fonts-emoji;
-        name = "Noto Emoji";
+        name = "Noto Color Emoji";
       };
       sizes = {
         applications = fontSize;
