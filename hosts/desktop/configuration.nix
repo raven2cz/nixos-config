@@ -1,4 +1,12 @@
-{...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
+  environment.systemPackages = with pkgs; [
+    solaar
+  ];
+
   # Desktop Environment Power Management
   powerManagement.cpuFreqGovernor = "performance";
 
