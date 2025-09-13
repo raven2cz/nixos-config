@@ -11,6 +11,7 @@ with lib; let
   marketplace-release = inputs.nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace-release;
 in {
   options.modules.vscode = {enable = mkEnableOption "vscode";};
+
   config = mkIf cfg.enable {
     programs.vscode = {
       enable = true;
@@ -20,32 +21,29 @@ in {
       profiles.default = {
         extensions =
           (with pkgs.vscode-extensions; [
-            # nix language
+            # Nix tooling
             bbenoist.nix
-
-            # nix formatting
             kamadorueda.alejandra
           ])
           ++ (with marketplace; [
-            # github.copilot
-
-            vivaxy.vscode-conventional-commits # commit message helper
+            # Useful extensions
+            vivaxy.vscode-conventional-commits
             eamodio.gitlens
             dbaeumer.vscode-eslint
             esbenp.prettier-vscode
 
-            # Color theme
-            jdinhlife.gruvbox
-            jonathanharty.gruvbox-material-icon-theme
+            # THEME & ICONS: Catppuccin
+            catppuccin.catppuccin-vsc
+            catppuccin.catppuccin-vsc-icons
           ])
           ++ (with marketplace-release; [
             # github.copilot-chat
           ]);
+
         userSettings = {
           "update.mode" = "none";
 
           "editor.fontLigatures" = true;
-
           "editor.formatOnPaste" = true;
           "editor.formatOnSave" = true;
           "editor.formatOnType" = false;
@@ -73,44 +71,42 @@ in {
           "window.menuBarVisibility" = "toggle";
 
           "workbench.activityBar.location" = "top";
-          "workbench.colorTheme" = mkForce "Gruvbox Dark Hard";
+          "workbench.colorTheme" = mkForce "Catppuccin Mocha";
+          "workbench.iconTheme" = "Catppuccin Icons";
+
           "workbench.editor.limit.enabled" = true;
           "workbench.editor.limit.perEditorGroup" = true;
           "workbench.editor.limit.value" = 10;
-          "workbench.iconTheme" = "gruvbox-material-icon-theme";
           "workbench.layoutControl.enabled" = false;
           "workbench.layoutControl.type" = "menu";
           "workbench.startupEditor" = "none";
           "workbench.statusBar.visible" = true;
           "workbench.panel.showLabels" = false;
 
-          # Extension settings
+          # Recommended for Catppuccin
+          "editor.semanticHighlighting.enabled" = true;
+          "terminal.integrated.minimumContrastRatio" = 1;
+          "window.titleBarStyle" = "custom";
+
+          # formatting
           "alejandra.program" = "alejandra";
-          "material-icon-theme.folders.theme" = "classic";
           "gitlens.rebaseEditor.ordering" = "asc";
           "github.copilot.nextEditSuggestions.enabled" = true;
+
+          # Lang specific
           "[nix]" = {
             "editor.defaultFormatter" = "kamadorueda.alejandra";
             "editor.formatOnPaste" = true;
             "editor.formatOnSave" = true;
             "editor.formatOnType" = false;
           };
-          "[json]" = {
-            "editor.defaultFormatter" = "vscode.json-language-features";
-          };
-          "[typescript]" = {
-            "editor.defaultFormatter" = "esbenp.prettier-vscode";
-          };
-          "[javascript]" = {
-            "editor.defaultFormatter" = "esbenp.prettier-vscode";
-          };
-          "[typescriptreact]" = {
-            "editor.defaultFormatter" = "esbenp.prettier-vscode";
-          };
-          "[css]" = {
-            "editor.defaultFormatter" = "esbenp.prettier-vscode";
-          };
+          "[json]" = {"editor.defaultFormatter" = "vscode.json-language-features";};
+          "[typescript]" = {"editor.defaultFormatter" = "esbenp.prettier-vscode";};
+          "[javascript]" = {"editor.defaultFormatter" = "esbenp.prettier-vscode";};
+          "[typescriptreact]" = {"editor.defaultFormatter" = "esbenp.prettier-vscode";};
+          "[css]" = {"editor.defaultFormatter" = "esbenp.prettier-vscode";};
         };
+
         # Keybindings
         keybindings = [
           {

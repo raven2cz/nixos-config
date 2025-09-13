@@ -46,6 +46,7 @@
     mission-center # system monitor
     mc # Midnight Commander
     ranger # Ranger
+    meld # Compare files/dirs
 
     # Node.js
     volta

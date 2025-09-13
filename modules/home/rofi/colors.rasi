@@ -1,8 +1,8 @@
 * {
-    background:     #1D2021;
-    background-alt: #282828;
-    foreground:     #FBF1C7;
-    selected:       #98971A;
-    active:         #3C3836;
-    urgent:         #FB4934FF;
+    background:     #1E1E2E;  /* base */
+    background-alt: #313244;  /* surface0 */
+    foreground:     #CDD6F4;  /* text */
+    selected:       #CBA6F7;  /* mauve (accent) */
+    active:         #45475A;  /* surface1 */
+    urgent:         #F38BA8FF;/* red */
 }
