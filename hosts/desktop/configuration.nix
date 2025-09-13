@@ -5,6 +5,7 @@
 }: {
   environment.systemPackages = with pkgs; [
     solaar
+    libnotify
   ];
 
   # Desktop Environment Power Management
@@ -24,4 +25,9 @@
     steam.enable = true;
     star-citizen.enable = false;
   };
+
+  hardware.logitech.wireless.enable = true;
+  hardware.logitech.wireless.enableGraphical = true;
+  users.groups.plugdev = {};
+  users.users.box.extraGroups = ["plugdev"];
 }

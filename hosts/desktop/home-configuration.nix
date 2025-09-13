@@ -2,7 +2,7 @@
   monitors.hyprland = {
     enable = true;
     config = ''
-      monitor = DP-2, 3840x2160@60, 0x0, 1
+      monitor = DP-2, 3840x2160@144, 0x0, 1.2
     '';
     workspaces = [
       "1,  monitor:DP-2"
