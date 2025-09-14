@@ -26,7 +26,7 @@ in {
       background = {
         monitor = "";
         path = "${../../../wallpapers/otherWallpaper/catppuccin/Cloudsday.jpg}";
-        blur_passes = 2;
+        blur_passes = 1;
         contrast = 0.8916;
         brightness = 0.8172;
         vibrancy = 0.1696;
@@ -96,7 +96,7 @@ in {
         font_size = 14;
         font_family = "Maple Mono Bold";
         fade_on_empty = false;
-        placeholder_text = ''<i><span foreground="#cdd6f4">Enter Password</span></i>'';
+        placeholder_text = ''<i><span foreground="##cdd6f4">Enter Password</span></i>'';
         hide_input = false;
         position = "0, 200";
         halign = "center";
