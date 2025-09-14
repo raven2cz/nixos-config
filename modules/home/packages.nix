@@ -32,6 +32,7 @@
     gifsicle # gif utility - for record.sh
     zenity # simple dialog creator - for record.sh
     swappy # snapshot editing tool - for screenshot.sh
+    cava # audio visualizer
 
     ## CLI fun
     cbonsai # terminal screensaver

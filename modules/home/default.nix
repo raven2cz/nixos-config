@@ -32,5 +32,6 @@
     ./waybar # status bar
     ./xdg-mimes.nix # xdg config
     ./zsh # shell
+    ./starship.nix # prompt
   ];
 }

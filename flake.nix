@@ -71,6 +71,19 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    catppuccin-bat = {
+      url = "github:catppuccin/bat";
+      flake = false;
+    };
+    catppuccin-cava = {
+      url = "github:catppuccin/cava";
+      flake = false;
+    };
+    catppuccin-starship = {
+      url = "github:catppuccin/starship";
+      flake = false;
+    };
   };
 
   # All outputs for the system (configs)
