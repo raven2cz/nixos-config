@@ -4,7 +4,7 @@
   ...
 }: let
   fontSize = 12;
-  themeName = "gruvbox-material-dark-hard";
+  themeName = "catppuccin-mocha";
 in {
   stylix = {
     enable = true;
