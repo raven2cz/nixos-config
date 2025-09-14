@@ -5,6 +5,7 @@
   ...
 }: {
   fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
@@ -18,23 +19,24 @@
 
   gtk = {
     enable = true;
-    # font = {
-    #   name = "Maple Mono";
-    #   size = 12;
-    # };
+
+    # Catppuccin Mocha (dark) – accent: mauve, size: standard, tweak: rimless
     theme = lib.mkForce {
-      name = "Colloid-Green-Dark-Gruvbox";
-      package = pkgs.colloid-gtk-theme.override {
-        colorVariants = ["dark"];
-        themeVariants = ["green"];
-        tweaks = ["gruvbox" "rimless" "float"];
+      name = "Catppuccin-Mocha-Standard-Mauve-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        variant = "mocha";
+        accents = ["mauve"];
+        size = "standard";
+        tweaks = ["rimless"];
       };
     };
-    gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
+
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
     };
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
-    };
+
+    gtk3.extraConfig = {gtk-application-prefer-dark-theme = 1;};
+    gtk4.extraConfig = {gtk-application-prefer-dark-theme = 1;};
   };
 }

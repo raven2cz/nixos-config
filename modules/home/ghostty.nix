@@ -23,7 +23,7 @@ in {
     selection-invert-fg-bg = true
 
     # Theme
-    theme = "gruvbox"
+    theme = "catppuccin"
     background-opacity = 0.66
 
     cursor-style = bar

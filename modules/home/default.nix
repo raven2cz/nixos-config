@@ -13,7 +13,7 @@
     ./gtk.nix # gtk theme
     ./hyprland # window manager
     ./kitty.nix # terminal
-    ./legcord # discord client with gruvbox
+    ./legcord # discord client
     ./micro.nix # nano replacement
     ./nautilus.nix # file manager
     ./nvim.nix # neovim editor

@@ -27,7 +27,7 @@
         #"AQ_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1:/dev/card2"
         "GDK_SCALE,1"
         "QT_SCALE_FACTOR,1"
-        "GTK_THEME, Colloid-Green-Dark-Gruvbox"
+        "GTK_THEME, Catppuccin-Mocha-Standard-Mauve-Dark"
         # Graphics drivers settings
         "__GL_GSYNC_ALLOWED, 0"
         "__GL_VRR_ALLOWED, 0"
