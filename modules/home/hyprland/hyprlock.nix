@@ -26,7 +26,6 @@ in {
       background = {
         monitor = "";
         path = "${../../../wallpapers/otherWallpaper/catppuccin/Cloudsday.jpg}";
-        color = "rgb(30,30,46)"; # 1E1E2E fallback (Catppuccin Mocha base)
         blur_passes = 2;
         contrast = 0.8916;
         brightness = 0.8172;
