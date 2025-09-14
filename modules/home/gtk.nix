@@ -1,43 +1,37 @@
 {
   pkgs,
   config,
+  lib,
   ...
 }: {
   fonts.fontconfig.enable = true;
-  home.packages = [
-    pkgs.nerdfonts
-    (pkgs.nerdfonts.override {fonts = ["JetBrainsMono" "Noto"];})
-    pkgs.twemoji-color-font
-    pkgs.noto-fonts-emoji
+
+  home.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.fira-code
+    nerd-fonts.caskaydia-cove
+    nerd-fonts.symbols-only
+    twemoji-color-font
+    noto-fonts-emoji
+    fantasque-sans-mono
+    maple-mono.truetype-autohint
   ];
 
   gtk = {
     enable = true;
-    font = {
-      name = "JetBrainsMono Nerd Font";
-      size = 11;
-    };
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.catppuccin-papirus-folders.override {
-        flavor = "mocha";
-        accent = "lavender";
+
+    # Catppuccin Mocha (dark) – accent: mauve, size: standard, tweak: rimless
+    theme = lib.mkForce {
+      name = "Catppuccin-Mocha-Standard-Mauve-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        variant = "mocha";
+        accents = ["mauve"];
+        size = "standard";
+        tweaks = ["rimless"];
       };
     };
-    theme = {
-      name = "Dracula";
-      package = pkgs.dracula-theme;
-    };
-    cursorTheme = {
-      name = "Nordzy-cursors";
-      package = pkgs.nordzy-cursor-theme;
-      size = 22;
-    };
-  };
 
-  home.pointerCursor = {
-    name = "Nordzy-cursors";
-    package = pkgs.nordzy-cursor-theme;
-    size = 22;
+    gtk3.extraConfig = {gtk-application-prefer-dark-theme = 1;};
+    gtk4.extraConfig = {gtk-application-prefer-dark-theme = 1;};
   };
 }
