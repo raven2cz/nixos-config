@@ -10,19 +10,23 @@
     enableNushellIntegration = true;
 
     settings = let
+      # Import Catppuccin Mocha palette from the input (repo stores it under themes/)
       catpp_mocha =
         builtins.fromTOML
         (builtins.readFile "${inputs."catppuccin-starship"}/themes/mocha.toml");
-    in
+    in (
       {
+        # UI tweaks
         directory = {
           format = "[ ](bold #89b4fa)[ $path ]($style)";
           style = "bold #b4befe";
         };
+
         character = {
           success_symbol = "[ ](bold #89b4fa)[ ➜](bold green)";
           error_symbol = "[ ](bold #89b4fa)[ ➜](bold red)";
         };
+
         cmd_duration = {
           format = "[󰔛 $duration]($style)";
           disabled = false;
@@ -31,9 +35,11 @@
           min_time_to_notify = 60000;
         };
 
-        palette = "catppuccin_mocha";
+        # Force our palette name to override any other module (conflict with "base16")
+        palette = lib.mkForce "catppuccin_mocha";
       }
-      # combine pallete tables Catppuccin (includes [palettes.catppuccin_mocha])
-      // catpp_mocha;
+      # Merge in the actual palette tables ([palettes.catppuccin_mocha = { ... }])
+      // catpp_mocha
+    );
   };
 }
