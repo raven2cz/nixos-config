@@ -1,34 +1,23 @@
 {
   pkgs,
-  config,
   lib,
   ...
 }: {
-  fonts.fontconfig.enable = true;
-
   home.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.fira-code
-    nerd-fonts.caskaydia-cove
-    nerd-fonts.symbols-only
-    twemoji-color-font
-    noto-fonts-emoji
-    fantasque-sans-mono
-    maple-mono.truetype-autohint
+    (catppuccin-gtk.override {
+      variant = "mocha";
+      accents = ["mauve"];
+      size = "standard";
+      tweaks = ["rimless"];
+    })
   ];
 
   gtk = {
     enable = true;
 
-    # Catppuccin Mocha (dark) – accent: mauve, size: standard, tweak: rimless
+    # Only select the theme by name; DO NOT set gtk.theme.package here
     theme = lib.mkForce {
       name = "Catppuccin-Mocha-Standard-Mauve-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        variant = "mocha";
-        accents = ["mauve"];
-        size = "standard";
-        tweaks = ["rimless"];
-      };
     };
 
     gtk3.extraConfig = {gtk-application-prefer-dark-theme = 1;};
