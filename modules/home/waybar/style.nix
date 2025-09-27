@@ -35,7 +35,7 @@
       padding-left:  5px;
       padding-right: 5px;
       margin-right: 10px;
-      border-top: 1px solid @base04;
+      border-bottom: 1px solid @base04;
     }
     #workspaces button.empty {
       color: @base07;
