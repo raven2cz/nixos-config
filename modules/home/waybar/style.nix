@@ -15,7 +15,6 @@
 
     window#waybar {
       background: @base01;
-      # border-top: 1px solid @base04;
     }
 
     tooltip {
