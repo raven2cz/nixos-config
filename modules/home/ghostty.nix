@@ -59,30 +59,4 @@ in {
     keybind = ctrl+shift+right=unbind
     keybind = shift+enter=text:\n
   '';
-  xdg.configFile."ghostty/themes/catppuccin-mocha".text = ''
-    background = #1e1e2e
-    foreground = #cdd6f4
-
-    palette = 0=#45475a
-    palette = 1=#f38ba8
-    palette = 2=#a6e3a1
-    palette = 3=#f9e2af
-    palette = 4=#89b4fa
-    palette = 5=#cba6f7
-    palette = 6=#94e2d5
-    palette = 7=#bac2de
-
-    palette = 8=#585b70
-    palette = 9=#f38ba8
-    palette = 10=#a6e3a1
-    palette = 11=#f9e2af
-    palette = 12=#89b4fa
-    palette = 13=#cba6f7
-    palette = 14=#94e2d5
-    palette = 15=#a6adc8
-
-    cursor-color = #f5e0dc
-    selection-foreground = #1e1e2e
-    selection-background = #f5e0dc
-  '';
 }
