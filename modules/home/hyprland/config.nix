@@ -153,7 +153,7 @@ in {
             "fluent_decel,  0,    0.2,  0.4,  1"
             "easeOutCirc,   0,    0.55, 0.45, 1"
             "easeOutCubic,  0.33, 1,    0.68, 1"
-            "fade_curve,    0.20, 0.85, 0.20, 1"
+            "fade_curve,    0.15, 0.85, 0.25, 1"
           ];
 
           animation = [
@@ -165,18 +165,16 @@ in {
             "windowsMove, 1, 2, fluent_decel, slide" # everything in between, moving, dragging, resizing.
 
             # Fade
-            "fadeIn,      1, 2,  fade_curve" # fade in (open) -> layers and windows
-            "fadeOut,     1, 2,  fade_curve" # fade out (close) -> layers and windows
+            "fadeIn,      1, 5,  fade_curve" # fade in (open) -> layers and windows
+            "fadeOut,     1, 5,  fade_curve" # fade out (close) -> layers and windows
             "fadeSwitch,  0, 1,  easeOutCirc" # fade on changing activewindow and its opacity
             "fadeShadow,  1, 5,  easeOutCirc" # fade on changing activewindow for shadows
             "fadeDim,     1, 4,  fluent_decel" # the easing of the dimming of inactive windows
 
             # Special for layers (rofi, swaync, waybar menu)
-            "layers,        1, 3, easeOutCubic,  popin 70%"
-            "layersIn,      1, 3, easeOutCubic,  popin 70%"
-            "layersOut,     1, 3, easeOutCubic,  popin 70%"
-            "fadeLayersIn,  1, 2, fade_curve"
-            "fadeLayersOut, 1, 2, fade_curve"
+            "layers,        1, 5, fade_curve,    fade"
+            "fadeLayersIn,  1, 5, fade_curve"
+            "fadeLayersOut, 1, 5, fade_curve"
 
             "workspaces,  1, 4,   easeOutCubic, fade" # styles: slide, slidevert, fade, slidefade, slidefadevert
           ];
